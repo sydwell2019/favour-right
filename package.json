@@ -20,8 +20,12 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "bitbox-sdk": "^2.2.10",
+    "bootstrap": "^4.3.1",
+    "bootstrap4": "0.0.1-security",
     "core-js": "^2.5.4",
-    "rxjs": "^6.0.0",
+    "font-awesome": "^4.7.0",
+    "rxjs": "6.3.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

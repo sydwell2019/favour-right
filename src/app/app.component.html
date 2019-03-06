@@ -1,20 +1,48 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+  <!-- <img src="assets/images/helping-hands-8.17.12.jpg" style="position: absolute; top: 0; left: 0; z-index: -1;"> -->
+  <img src="assets/images/helping-hands-8.17.12.jpg"
+    [ngClass]="{ backgroundImageSolid: !loggedIn,  backgroundImageOpacity: loggedIn}">
+  <app-header></app-header>
 
+  <ng-container *ngIf="!loggedIn">
+    <div class='row'>
+      <div class="col-sm-6">
+        &nbsp;
+      </div>
+      <div class="col-sm">
+        <ng-container *ngIf="showLogin">
+          <app-login (loginEvent)="authEvent($event);"></app-login>
+        </ng-container>
+        <ng-container *ngIf="showRegistration">
+          <app-registration (registrationEvent)="authEvent($event);"></app-registration>
+        </ng-container>
+        <ng-container *ngIf="showRecover">
+          <app-recover (recoverEvent)="authEvent($event);"></app-recover>
+        </ng-container>
+      </div>
+      <div class="col-sm">
+          &nbsp;
+        </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="loggedIn">
+    <app-menu (menuEvent)="menuProcessEvent($event);"> </app-menu>
+      <div [ngSwitch]="showMenu">
+        <div *ngSwitchCase="'how'">
+          <app-how></app-how>
+        </div>
+        <div *ngSwitchCase="'favour'">
+          <app-favour></app-favour>
+        </div>
+        <div *ngSwitchCase="'ask'">
+          <app-ask></app-ask>
+        </div>
+        <div *ngSwitchCase="'answer'">
+          <app-answer></app-answer>
+        </div>
+        <div *ngSwitchCase="'profile'">
+          <app-profile-new></app-profile-new>
+        </div>
+      </div>
+   </ng-container>
+</div>
