@@ -7,9 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Create a Fresh Project
 ng new favour-right
 
-## Create a Fresh Project
-ng new favour-right
-
 ## Change directory into your project
 cd favour-right
 
