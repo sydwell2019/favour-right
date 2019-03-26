@@ -2,26 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
-## Development server
+# FOLLOW THESE INSTRUCTIONS 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Create a Fresh Project
+ng new favour-right
 
-## Code scaffolding
+## Create a Fresh Project
+ng new favour-right
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Change directory into your project
+cd favour-right
 
-## Build
+## Initialize git
+git init
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Add the remote connection to this repository
+git remote add origin https://github.com/sydwell2019/favour-right.git
 
-## Running unit tests
+## Download the respository
+git fetch
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Set the head of the respository
+git reset --hard origin/master
 
-## Running end-to-end tests
+## Install the latest packages
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Load the project
+ng serve
