@@ -6,7 +6,7 @@ import * as Global from './global';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
-import * as BITBOXSDK from 'bitbox-sdk/lib/bitbox-sdk';
+// import * as BITBOXSDK from 'bitbox-sdk/lib/bitbox-sdk';
 
 
 declare const Buffer;
@@ -24,7 +24,7 @@ export class ApiService {
   private disableActivatedBtn = true;
   private descriptors: [[string]];
   private loggedInUser: Global.LoggedUserJson;
-  BitBox = new BITBOXSDK.default();
+  // BitBox = new BITBOXSDK.default();
 
   public constructor(private http: HttpClient) { }
 
