@@ -1,8 +1,9 @@
-<p>
-  <button (click)="menuChange('how')">How</button>
-  <button (click)="menuChange('favour')">Favours</button>
-  <button (click)="menuChange('ask')">Ask</button>
-  <button (click)="menuChange('answer')">Answer</button>
-  <button (click)="menuChange('profile')">Profile</button>
-  <button (click)="logout();">X</button>
-</p>
+<div class="d-flex justify-content-around ml-4 mr-4">
+  <button class="btn btn-info" (click)="menuChange('how')">How</button>
+  <button class="btn btn-info" (click)="menuChange('favour')">Favours</button>
+  <button class="btn btn-info" (click)="menuChange('ask')">Ask</button>
+  <button class="btn btn-info" (click)="menuChange('answer')">Answer</button>
+  <button class="btn btn-info" (click)="menuChange('profile')">Profile</button>
+  <button class="btn btn-info" (click)="logout();" title="LOGOUT" >X</button>
+</div>
+<br>

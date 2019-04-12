@@ -8,12 +8,14 @@ import { Validators } from '@angular/forms';
   templateUrl: './profile.component.html'
 })
 export class ProfileComponent implements OnInit {
+
   askForm = this.fb.group({
     username: [{value: 'ryrtyrt', 'disabled': true} ],
     firstName: ['check'],
     lastName: ['Samuel', Validators.required],
     password: ['']
   }, {username: [{'disabled': true}]});
+
   name = 'unknown';
   constructor(private fb: FormBuilder, private apiService: ApiService) { }
 

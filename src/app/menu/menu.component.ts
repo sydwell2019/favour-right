@@ -19,6 +19,9 @@ export class MenuComponent implements OnInit {
   }
 
   logout() {
-    location.reload();
+    if (confirm (' About to logout?')) {
+    // This code should work on any JavaScript page to reload the page
+      location.reload();
+    }
   }
 }

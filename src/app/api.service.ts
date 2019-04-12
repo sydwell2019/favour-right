@@ -136,7 +136,7 @@ export class ApiService {
 
   public createFavour(registrationData: {any}): Observable<string> {
     // TODO also check if not login
-
+    console.log(registrationData);
     const paramBody = {
       'action': 'createFavour'
       , 'info': registrationData

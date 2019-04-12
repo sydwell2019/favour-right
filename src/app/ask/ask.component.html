@@ -17,7 +17,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label form-control-label">Type of Favour</label>
               <div class="col-md-8">
-                <select class="form-control" #selectElem (change)="setOption(selectElem.value)">
+                <select #selectElem (change)="setOption(selectElem.value)">
                   <option *ngFor="let favType of localDes[0]" [value]="favType">
                     {{favType}}
                   </option>
@@ -26,27 +26,23 @@
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label form-control-label">Reward</label>
-              <div class="col-md-8 input-group">
-                <input class="form-control" type="number" min="0" max="10" formControlName="reward">
-                <div class="input-group-append">
-                  <button class="btn btn-success" type="button" title='What is a FAV?'>FAV's</button>
-                </div>
+              <div class="col-md-8">
+                <input class="form-control" type="text" formControlName="username">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-12 col-form-label form-control-label">Describe the <b>Favour</b> or <b>Question</b> you like an
+              <label class="col-md-12 col-form-label form-control-label">Describe the Favour or Question you like an
                 answer to.</label>
               <div class="col-md-12">
-                <textarea class="form-control col-md-12" formControlName="description"></textarea>
+                <textarea class="col-md-12">
+
+                </textarea>
               </div>
             </div>
           </div>
         </form>
-        <div class="card-footer  ">
-            <!-- <div class="d-flex justify-content-end mr-5"> --> <!-- Align button towards the right edge -->
-              <div class="d-flex flex-wrap justify-content-center">
-          <button type='submit' class='btn btn-success '>Create</button>
-          </div>
+        <div class="card-footer">
+          <button class='btn btn-success'>Create</button>
         </div>
       </div>
       <!-- /form user info -->

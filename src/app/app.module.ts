@@ -16,6 +16,8 @@ import { AnswerComponent } from './answer/answer.component';
 import { HowComponent } from './how/how.component';
 
 import { ApiService } from './api.service';
+import { Ask2Component } from './ask2/ask2.component';
+import { Ask3Component } from './ask3/ask3.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ApiService } from './api.service';
     FavourComponent,
     AskComponent,
     AnswerComponent,
-    HowComponent
+    HowComponent,
+    Ask2Component,
+    Ask3Component
   ],
   imports: [
     BrowserModule,
